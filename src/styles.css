@@ -2,3 +2,31 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flexHorizontal
+{
+  display: flex;
+  flex-direction: row;
+}
+.flexVertical
+{
+  display: flex;
+  flex-direction: column;
+}
+.headerButton.mat-raised-button
+{
+  margin: 0 10pt;
+}
+.flexGrow1
+{
+  flex-grow: 1;
+}
+.flexGrow2
+{
+  flex-grow: 2;
+}
+.flexAround
+{
+  align-items: center;
+  justify-content: space-around;
+}

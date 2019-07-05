@@ -1,0 +1,12 @@
+div#productsComponentBody {
+  margin: 2vh 5vw;
+}
+div#gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+div#gridContainer > * {
+  margin: 2vw;
+}

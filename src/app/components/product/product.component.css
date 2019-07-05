@@ -1,0 +1,22 @@
+div.productCard {
+  padding: 8px 4px;
+  border-radius: 8px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+div.productHeader {
+  display: flex;
+  max-height: 64px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+div.productContent {
+  justify-content: space-around;
+}
+img.productIcon {
+  max-height: 64px;
+}
+img.productImage {
+  max-height: 256px;
+}

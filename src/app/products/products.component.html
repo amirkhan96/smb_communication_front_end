@@ -1,3 +1,8 @@
-<div class="flexVertical flexAround">
-  <h2 style="font-family: monospace">با عرض پوزش، صفحه محصولات هنوز آماده نیست</h2>
+<div id="productsComponentBody">
+  <div id="gridContainer">
+    <product *ngFor="let p of ps" [p]=p class="product"></product>
+  </div>
+  <div class="flexHorizontal flexJEnd">
+    <button mat-fab color="primary" (click)="OnAddButtonClicked()">+</button>
+  </div>
 </div>

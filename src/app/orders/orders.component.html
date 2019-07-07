@@ -1,3 +1,9 @@
-<div class="flexVertical flexJAround">
-  <h2 style="font-family: monospace">با عرض پوزش، صفحه سفارشات هنوز آماده نیست</h2>
+<div id="ordersComponentBody">
+  <div id="gridContainer">
+    <order *ngFor="let o of os" [o]=o class="order"></order>
+  </div>
+  <div class="flexHorizontal flexJEnd">
+    <button mat-fab color="primary" (click)="onAddButtonClicked()">+</button>
+  </div>
+  <dialog-orders-add #addOrderDialog></dialog-orders-add>
 </div>

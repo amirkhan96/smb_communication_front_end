@@ -6,7 +6,7 @@ import { AddProductDialogComponent } from '../components/add-product-dialog/add-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css', '../styles/flexGrid.css']
 })
 export class ProductsComponent implements OnInit {
   columnCount: number;

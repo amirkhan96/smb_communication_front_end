@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'dialog-products-add',
   templateUrl: './add-product-dialog.component.html',
-  styleUrls: ['./add-product-dialog.component.css']
+  styleUrls: ['./add-product-dialog.component.css', '../../styles/dialogs.css']
 })
 export class AddProductDialogComponent {
   name: string;

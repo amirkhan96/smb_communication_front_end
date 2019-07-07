@@ -1,1 +1,27 @@
-<p>add-order-dialog works!</p>
+<div class="dialogContainer" *ngIf="isShown">
+  <div class="dialogBody background-color-secondary flexVertical flexJAround">
+    <mat-form-field>
+      <mat-label>Product</mat-label>
+      <mat-select [(ngModel)]="product">
+        <mat-option *ngFor="let p of ps" [value]="p.id">{{p.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <input matInput [(ngModel)]="count" placeholder="Count">
+    <input matInput [(ngModel)]="deadline" placeholder="Deadline">
+    <h4><br/><br/>Request Group : </h4>
+    <mat-list>
+      <mat-list-item *ngFor="let g of requestGroup">
+        <div class="flexHorizontal flexJBetween">
+          <p>{{g}}</p>
+          <button mat-raised-button (click)="delGroup(g)">X</button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <div class="flexHorizontal flexJBetween">
+      <input #grpInput matInput placeholder="Group">
+      <button mat-raised-button (click)="addGroup(grpInput);">+</button>
+    </div>
+    <button mat-raised-button (click)="onSubmit()">Create Order</button>
+    <button mat-raised-button (click)="isShown = false;">Close</button>
+  </div>
+</div>

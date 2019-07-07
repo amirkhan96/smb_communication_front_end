@@ -1,0 +1,18 @@
+.dialogContainer {
+  background-color: #00000072;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20vh 20vw;
+}
+.dialogBody {
+  padding: 2vh 2vw;
+  border-radius: 8px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.dialogBody .mat-raised-button, .dialogBody input {
+  margin: 1vh 1vw;
+}

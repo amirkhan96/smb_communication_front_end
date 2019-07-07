@@ -15,6 +15,7 @@ export class ProductsService {
   }
   private GenerateDebugProduct(i: number): Product {
     return new Product(
+      i.toString(),
       'Product ' + i.toString(),
       'https://picsum.photos/id/' + (i + 1).toString() + '00/256/256',
       'User ' + (i % 3).toString(),

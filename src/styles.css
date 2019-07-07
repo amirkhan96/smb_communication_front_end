@@ -1,33 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.flexHorizontal
-{
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.background-color-primary {
+  background-color: #ffffff;
+}
+.background-color-secondary {
+  background-color: #f5f5f5;
+}
+.flexHorizontal {
   display: flex;
   flex-direction: row;
 }
-.flexVertical
-{
+.flexVertical {
   display: flex;
   flex-direction: column;
 }
-.flexGrow1
-{
+.flexGrow1 {
   flex-grow: 1;
 }
-.flexGrow2
-{
+.flexGrow2 {
   flex-grow: 2;
 }
-.flexJAround
-{
-  align-items: center;
+.flexJAround {
   justify-content: space-around;
 }
-.flexJEnd
-{
-  align-items: center;
+.flexJBetween {
+  justify-content: space-between;
+}
+.flexJEnd {
   justify-content: flex-end;
+}
+.flexACenter {
+  align-items: center;
 }

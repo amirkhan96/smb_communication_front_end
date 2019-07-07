@@ -1,5 +1,7 @@
-import { Component, OnInit, HostListener } from '@angular/core';
 import { Product } from '../components/product/product';
+import { ProductsService } from '../services/products.service';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
+import { AddProductDialogComponent } from '../components/add-product-dialog/add-product-dialog.component';
 
 @Component({
   selector: 'app-products',
@@ -7,28 +9,26 @@ import { Product } from '../components/product/product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  ps: Product[];
   columnCount: number;
   gridContainer: Element;
-  constructor() {
-    this.ps = [];
+  productsService: ProductsService;
+  @ViewChild('addProductDialog', { read: null, static: false }) addProductDialog: AddProductDialogComponent;
+  constructor(productsService: ProductsService) {
+    this.productsService = productsService;
   }
-  private GenerateDebugProduct(i: number): Product {
-    return new Product(
-      'Product ' + i.toString(),
-      'https://picsum.photos/id/' + (i + 1).toString() + '00/256/256',
-      'User ' + (i % 3).toString(),
-      'This is Product number ' + i.toString(),
-    );
+  get ps(): Product[] {
+    return this.productsService.allAvailableProducts;
   }
   ngOnInit() {
     this.gridContainer = document.getElementById('gridContainer');
-    for (let i = 0; i < 10; i++) {
-      this.ps[i] = this.GenerateDebugProduct(i);
-    }
     this.onResize();
   }
   OnAddButtonClicked(): void {
+    if (this.addProductDialog === null) {
+      console.error('addProductDialog is null');
+    } else {
+      this.addProductDialog.isShown = true;
+    }
   }
   @HostListener('window:resize', ['$event.target'])
   onResize(): void {

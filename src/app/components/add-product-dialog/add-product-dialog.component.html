@@ -1,1 +1,17 @@
-<p>add-product-dialog works!</p>
+<div class="dialogContainer" *ngIf="isShown">
+  <div class="dialogBody background-color-secondary flexVertical flexJAround">
+    <div class="flexHorizontal flexJAround">
+      <div style="width: 20vw; min-height: 20vw; padding: 1vh 1vw;">
+        <img #addImage src="{{imageUrl}}" (error)="onImageError(addImage);" style="width: 100%;">
+      </div>
+      <div class="flexVertical flexJAround flexGrow1">
+        <input matInput [(ngModel)]="name" placeholder="Product Name">
+        <input matInput [(ngModel)]="price" placeholder="Price">
+        <input matInput [(ngModel)]="constructionUrl" placeholder="Construction Url">
+        <input matInput [(ngModel)]="imageUrl" placeholder="Image Url">
+      </div>
+    </div>
+    <button mat-raised-button (click)="onCreateClicked()">Create Product</button>
+    <button mat-raised-button (click)="isShown = false;">Close</button>
+  </div>
+</div>

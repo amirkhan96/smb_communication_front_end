@@ -1,0 +1,14 @@
+<mat-toolbar class='flexHorizontal flexJAround'>
+  <button mat-button class='headerButton' [routerLink]="['/']">Smb Communication</button>
+  <span class='flexHorizontal flexJAround'>
+    <!-- Buttons -->
+    <a class='headerButton' mat-raised-button routerLinkActive [routerLink]="['/messages']"
+      routerLinkActive="router-link-active">گفت‌وگوها</a>
+    <a class='headerButton' mat-raised-button routerLinkActive [routerLink]="['/groups']"
+      routerLinkActive="router-link-active">گروه‌ها و درخواست‌ها</a>
+    <a class='headerButton' mat-raised-button routerLinkActive [routerLink]="['/orders']"
+      routerLinkActive="router-link-active">سفارشات</a>
+    <a class='headerButton' mat-raised-button routerLinkActive [routerLink]="['/products']"
+      routerLinkActive="router-link-active">محصولات</a>
+  </span>
+</mat-toolbar>

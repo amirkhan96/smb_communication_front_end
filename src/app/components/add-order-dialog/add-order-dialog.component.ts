@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from 'src/app/services/products.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'dialog-orders-add',
@@ -7,7 +7,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./add-order-dialog.component.css', '../../styles/dialogs.css']
 })
 export class AddOrderDialogComponent {
-  isShown: boolean = false;
+  isShown = false;
   productsService: ProductsService;
   product: string;
   count: number;

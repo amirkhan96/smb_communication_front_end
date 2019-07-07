@@ -8,7 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import { ProductsComponent } from './products/products.component';
 import { MessagesComponent } from './messages/messages.component';
 import { OrdersComponent } from './orders/orders.component';
-import { ComponentsModule } from './components/components.module';
+import { ComponentsModule } from '../components/components.module';
+import { GroupsComponent } from './groups/groups.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ComponentsModule } from './components/components.module';
     HeaderComponent,
     ProductsComponent,
     MessagesComponent,
-    OrdersComponent
+    OrdersComponent,
+    GroupsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

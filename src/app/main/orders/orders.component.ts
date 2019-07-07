@@ -1,12 +1,12 @@
 import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
-import { Order } from '../components/order/order';
-import { OrdersService } from '../services/orders.service';
-import { AddOrderDialogComponent } from '../components/add-order-dialog/add-order-dialog.component';
+import { Order } from '../../components/order/order';
+import { OrdersService } from '../../services/orders.service';
+import { AddOrderDialogComponent } from '../../components/add-order-dialog/add-order-dialog.component';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css', '../styles/flexGrid.css']
+  styleUrls: ['./orders.component.css', '../../styles/flexGrid.css']
 })
 export class OrdersComponent implements OnInit {
   columnCount: number;

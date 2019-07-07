@@ -1,12 +1,12 @@
-import { Product } from '../components/product/product';
-import { ProductsService } from '../services/products.service';
+import { Product } from '../../components/product/product';
+import { ProductsService } from '../../services/products.service';
 import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
-import { AddProductDialogComponent } from '../components/add-product-dialog/add-product-dialog.component';
+import { AddProductDialogComponent } from '../../components/add-product-dialog/add-product-dialog.component';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css', '../styles/flexGrid.css']
+  styleUrls: ['./products.component.css', '../../styles/flexGrid.css']
 })
 export class ProductsComponent implements OnInit {
   columnCount: number;

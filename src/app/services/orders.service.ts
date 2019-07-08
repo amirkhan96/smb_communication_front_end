@@ -20,9 +20,9 @@ export class OrdersService {
       (i * 13 + 11) % 6,
       'Creator' + i.toString(),
       new Date(Date.now()).toISOString(),
-      'Group ' + i.toString(),
-      'Group ' + (i + 1).toString(),
-      'Group ' + (i + 2).toString()
+      'G' + (1 + (i % 4)).toString(),
+      'G' + (1 + ((i + 1) % 6)).toString(),
+      'G' + (1 + ((i + 2) % 6)).toString()
     );
   }
 }

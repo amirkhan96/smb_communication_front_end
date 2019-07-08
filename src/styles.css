@@ -38,3 +38,9 @@ body {
 .flexACenter {
   align-items: center;
 }
+.flexAStretch {
+  align-items: stretch;
+}
+.flexAStart {
+  align-items: flex-start;
+}

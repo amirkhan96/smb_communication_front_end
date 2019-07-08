@@ -7,3 +7,7 @@ div#gridContainer {
 div#gridContainer > * {
   margin: 2vw;
 }
+
+.gridCard {
+  background-color: #f5f5f5;
+}

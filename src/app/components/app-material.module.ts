@@ -7,6 +7,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatDialogModule,
     MatToolbarModule,
     MatListModule,
-    MatGridListModule
+    MatDividerModule,
+    MatGridListModule,
+    MatTabsModule
   ],
   exports: [
     FormsModule,
@@ -27,7 +31,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatDialogModule,
     MatToolbarModule,
     MatListModule,
-    MatGridListModule
+    MatDividerModule,
+    MatGridListModule,
+    MatTabsModule
   ]
 })
 export class AppMaterialModule { }

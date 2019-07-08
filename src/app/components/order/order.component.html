@@ -1,18 +1,19 @@
-<div class="orderCard">
+<div class="orderCard flexVertical flexJStretch">
   <div class="orderHeader">
     <span class="emptySpace"></span>
     <span class="productName">{{o.count}} × {{o.productName}}</span>
     <span class="emptySpace"></span>
   </div>
   <div class="orderCreator">
-    <p>By <b> {{o.creator}} </b> until<br/>
+    <p>توسط <b> {{o.creator}} </b> تا<br/>
     <span class="orderDeadline">{{deadline}}</span>
     </p>
   </div>
   <div class="orderRequestGroup">
-    <p>Sent to :</p>
+    <p>گروه‌های هدف :</p>
     <ul>
       <li *ngFor="let g of o.requestGroup">{{g}}</li>
     </ul>
   </div>
+  <button *ngIf="hasAcceptButton" mat-raised-button color="warn" (click)="onAccept();">پذیرش</button>
 </div>

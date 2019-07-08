@@ -8,7 +8,10 @@ import { Order } from './order';
 })
 export class OrderComponent {
   @Input() o: Order;
+  @Input() hasAcceptButton: boolean;
   get deadline(): string {
     return this.o.deadline;
+  }
+  onAccept(): void {
   }
 }

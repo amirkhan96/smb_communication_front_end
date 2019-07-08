@@ -1,0 +1,25 @@
+<div class="dialogContainer" *ngIf="isShown">
+  <div class="dialogBody background-color-secondary flexVertical flexJAround">
+    <input matInput [(ngModel)]="name" placeholder="Group Name">
+    <div class="flexHorizontal flexJBetween">
+      <mat-form-field>
+        <mat-label>User</mat-label>
+        <mat-select [(ngModel)]="currentUser">
+          <mat-option *ngFor="let u of allUsers" [value]="u.id">{{u.firstName}} {{u.lastName}} ({{u.email}})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button (click)="addUser()">+</button>
+    </div>
+    <mat-list>
+      <mat-list-item *ngFor="let u of users">
+        <div class="flexHorizontal flexJBetween">
+          <p>{{u}}</p>
+          <button mat-raised-button (click)="delUser(u)">X</button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <button mat-raised-button (click)="onSubmit()">Create Group</button>
+    <button mat-raised-button (click)="isShown = false;">Close</button>
+  </div>
+</div>

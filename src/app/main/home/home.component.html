@@ -1,1 +1,34 @@
-<p>home works!</p>
+<div *ngIf="isLoggedIn; then userContent else guestContent">here is ignored</div>
+
+<ng-template #userContent>
+  <div id="homeContent">
+    <div style="padding: 10vh 0;"></div>
+    <h2>سلام {{ username }}</h2>
+    <h3>برای ادامه به یکی از صفحات زیر بروید</h3>
+    <span class='flexHorizontal flexJAround' style="padding: 10vh 5vw;">
+      <a class='navigatorButton' color="primary" mat-raised-button routerLinkActive [routerLink]="['/messages']"
+        routerLinkActive="router-link-active">گفت‌وگوها</a>
+      <a class='navigatorButton' color="primary" mat-raised-button routerLinkActive [routerLink]="['/groups']"
+        routerLinkActive="router-link-active">گروه‌ها و درخواست‌ها</a>
+      <a class='navigatorButton' color="primary" mat-raised-button routerLinkActive [routerLink]="['/orders']"
+        routerLinkActive="router-link-active">سفارشات</a>
+      <a class='navigatorButton' color="primary" mat-raised-button routerLinkActive [routerLink]="['/products']"
+        routerLinkActive="router-link-active">محصولات</a>
+    </span>
+  </div>
+</ng-template>
+
+<ng-template #guestContent>
+  <div id="homeContent">
+    <h2>سلام</h2>
+    <h3>برای ادامه ثبت‌نام یا ورود نمایید</h3>
+  </div>
+  <mat-tab-group style="text-align: center">
+    <mat-tab label="ورود">
+      <login-form></login-form>
+    </mat-tab>
+    <mat-tab label="ثبت نام">
+      <signup-form></signup-form>
+    </mat-tab>
+  </mat-tab-group>
+</ng-template>

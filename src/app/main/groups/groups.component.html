@@ -1,1 +1,14 @@
-<p>groups works!</p>
+<div class="flexHorizontal flexJAround flexAStretch" style="min-height: 90%;">
+  <div class="flexVertical flexJStart flexAStretch gridCard" style="width: 25%;">
+    <button mat-raised-button class="groupButton" color="warn" (click)="onAddGroupClicked()">تعریف گروه جدید</button>
+    <button mat-raised-button class="groupButton" color="accent" *ngFor="let g of gs"
+      (click)="selectGroup(g);">{{g.name}}</button>
+  </div>
+  <mat-divider [vertical]="true"></mat-divider>
+  <div class="flexVertical flexJStart flexAStretch" style="width: 75%;">
+    <div id="gridContainer">
+      <order *ngFor="let o of selectedOrders" [o]=o class="gridCard"></order>
+    </div>
+  </div>
+</div>
+<dialog-groups-add #addGroupsDialog></dialog-groups-add>

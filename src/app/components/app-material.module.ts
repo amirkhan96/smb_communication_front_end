@@ -8,7 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatListModule,
     MatDividerModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ],
   exports: [
     FormsModule,
@@ -33,7 +35,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatListModule,
     MatDividerModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ]
 })
 export class AppMaterialModule { }

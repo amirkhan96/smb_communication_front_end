@@ -8,7 +8,9 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class HeaderComponent {
   usersService: UsersService;
-  get isLoggedIn(): boolean { return this.usersService.isLoggedIn; }
+  get isLoggedIn(): boolean {
+    return this.usersService.isLoggedIn;
+  }
   constructor(usersService: UsersService) {
     this.usersService = usersService;
   }
